@@ -7,7 +7,7 @@ steps:
       args:
         - 'run'
         - 'deploy'
-        - '$SERVICE_NAME'
+        - '${SERVICE_NAME}'
         - '--image'
         - 'gcr.io/$PROJECT_ID/${SERVICE_NAME}:$COMMIT_SHA'
         - '--region'
@@ -17,5 +17,5 @@ steps:
 images:
     - 'gcr.io/$PROJECT_ID/${SERVICE_NAME}:$COMMIT_SHA'
 substitutions:
-    REGION: europe-west4
-    SERVICE_NAME: sg-calculator-test
+    _REGION: europe-west4
+    _SERVICE_NAME: sg-calculator-test
