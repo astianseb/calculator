@@ -17,5 +17,5 @@ steps:
 images:
     - 'gcr.io/$PROJECT_ID/${SERVICE_NAME}:$COMMIT_SHA'
 substitutions:
-    - 'REGION=europe-west4'
-    - 'SERVICE_NAME=sg-calculator-test' 
+    REGION: europe-west4
+    SERVICE_NAME: sg-calculator-test
