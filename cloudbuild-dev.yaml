@@ -1,16 +1,13 @@
 steps:
-    - name: 'gcr.io/cloud-builders/docker'
-      args: ['build', '-f', './Dockerfile.dev', '-t', 'eu.gcr.io/$PROJECT_ID/${_SERVICE_NAME}:$COMMIT_SHA', '.']
-    - name: 'gcr.io/cloud-builders/docker'
-      args:
-        - 'npm'
-        - 'run'
-        - 'test'
-        - '--'
-        - '--CI=true'
-        - '--coverage'
-images:
-    - 'eu.gcr.io/$PROJECT_ID/${_SERVICE_NAME}:$COMMIT_SHA'
-substitutions:
-    _REGION: europe-west4
-    _SERVICE_NAME: sg-calculator-test
+    - name: 'gcr.io/cloud-builders/node'
+      entrypoint: npm
+      args: ['install']
+    - name: 'gcr.io/cloud-builders/node'
+      entrypoint: npm
+    - name: 'gcr.io/cloud-builders/node'
+      entrypoint: npm
+      args: ['test']
+    - name: 'gcr.io/cloud-builders/node'
+      entrypoint: npm
+      args: ['run', 'build']
+    
