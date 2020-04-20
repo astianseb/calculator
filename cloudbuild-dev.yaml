@@ -10,4 +10,3 @@ steps:
     - name: node:alpine
       entrypoint: npm
       args: ['run', 'build']
-    
