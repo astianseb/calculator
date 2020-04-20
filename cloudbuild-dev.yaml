@@ -4,4 +4,6 @@ steps:
       args: ['install']
     - name: node:alpine
       entrypoint: npm
-      args: ['test', '--', '--CI=true', '--coverage', '--watchAll=false']
+      args: ['test', '--', '--coverage']
+      env:
+        - 'CI=true'
