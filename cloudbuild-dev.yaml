@@ -8,7 +8,7 @@ steps:
         - 'test'
         - '--'
         - '--CI=true'
-        - '--coverage
+        - '--coverage'
 images:
     - 'eu.gcr.io/$PROJECT_ID/${_SERVICE_NAME}:$COMMIT_SHA'
 substitutions:
