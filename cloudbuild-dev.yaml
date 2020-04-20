@@ -1,13 +1,13 @@
 steps:
-    - name: 'gcr.io/cloud-builders/node'
+    - name: node:alpine
       entrypoint: npm
       args: ['install']
-    - name: 'gcr.io/cloud-builders/node'
+    - name: node:alpine
       entrypoint: npm
-    - name: 'gcr.io/cloud-builders/node'
+    - name: node:alpine
       entrypoint: npm
       args: ['test']
-    - name: 'gcr.io/cloud-builders/node'
+    - name: node:alpine
       entrypoint: npm
       args: ['run', 'build']
     
