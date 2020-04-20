@@ -4,7 +4,4 @@ steps:
       args: ['install']
     - name: node:alpine
       entrypoint: npm
-      args: ['test', '--', '--coverage', '--watchAll=false']
-    - name: node:alpine
-      entrypoint: npm
-      args: ['run', 'build']
+      args: ['test', '--', '--CI=true', '--coverage', '--watchAll=false']
